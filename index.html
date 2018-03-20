@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <title>AirTraffic App</title>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>AirTraffic App</h1>
+      <h3>Monitor sky beyond you</h3>
+      <div class="position">
+        <p>Find out all airplane flights surrounding you within a radius of 100km</p>
+        <p>Your current position is</p>
+        <p>Lat:
+          <span id="latValue"></span> Long:
+          <span id="longValue"></span>
+        </p>
+      </div>
+    </header>
+    <div class="row">
+      <div class="col-12">
+        <table id="results">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Direction</th>
+              <th>Altitude</th>
+              <th>Flight code</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="tbody">
+
+          </tbody>
+        </table>
+        <div id="warning">
+        </div>
+        <div id="loader">
+          <div class="radar-spinner" :style="spinnerStyle">
+            <div class="circle">
+              <div class="circle-inner-container">
+                <div class="circle-inner"></div>
+              </div>
+            </div>
+
+            <div class="circle">
+              <div class="circle-inner-container">
+                <div class="circle-inner"></div>
+              </div>
+            </div>
+
+            <div class="circle">
+              <div class="circle-inner-container">
+                <div class="circle-inner"></div>
+              </div>
+            </div>
+
+            <div class="circle">
+              <div class="circle-inner-container">
+                <div class="circle-inner"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
