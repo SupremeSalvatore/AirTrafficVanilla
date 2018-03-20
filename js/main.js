@@ -53,7 +53,7 @@ let outsideResolve;
 let outsideReject;
 
 function getLogo(company) {
-  let logoUrl = `https://company.clearbit.com/v1/domains/find?name=${company}`;
+  let logoUrl = `https://cors-anywhere.herokuapp.com/https://company.clearbit.com/v1/domains/find?name=${company}`;
   return new Promise((resolve, reject) => {
     fetch(logoUrl, {
         headers: {
